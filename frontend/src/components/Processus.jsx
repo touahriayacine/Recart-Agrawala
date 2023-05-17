@@ -1,15 +1,23 @@
-function Processus({ details, className }) {
+function Processus({ details }) {
   return (
     <div
       className={
         details.nom == "P2"
           ? " flex justify-start items-start h-60"
           : details.nom == "P3"
-          ? " flex justify-end items-start h-60"
+          ? " flex justify-end items-start h-60 relative bottom-[10px]"
+          : details.nom == "P5"
+          ? " flex h-60 justify-center items-center relative bottom-[10px]"
+          : details.nom == "P6"
+          ? " flex h-60 justify-center items-center relative left-[10px]"
+          : details.nom == "P7"
+          ? " flex h-60 justify-center items-center relative right-[10px]"
           : details.nom == "P8"
-          ? " flex justify-start items-end h-60"
+          ? " flex justify-start items-end h-60 relative left-[10px]"
           : details.nom == "P9"
-          ? " flex justify-end items-end h-60"
+          ? " flex justify-end items-end h-60 relative right-[20px]"
+          : details.nom == "P10"
+          ? " flex justify-end items-end h-60 relative left-[10px]"
           : " flex justify-center items-center h-60"
       }
     >
